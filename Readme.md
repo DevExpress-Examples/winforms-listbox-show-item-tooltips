@@ -12,7 +12,8 @@
 # How to show a tooltip for the ListBoxControl item
 
 
-<p>You should use the ToolTipController.ShowHint method to show an item tooltip. To get the item the mouse pointer is hovering over, use the ListBoxControl.IndexFromPoint method. In the ListBoxControl.MouseMove event handler, show your tooltip.</p>
+<p>Use the ToolTipController.GetActiveObjectInfo event to configure the tooltip for a particular visual element. To get the item the mouse pointer is hovering over, use the ListBoxControl.IndexFromPoint method.</p>
+<p>For more information, refer to the following help topic: <a href="https://docs.devexpress.com/WindowsForms/1964/common-features/tooltip-management/how-to-display-a-tooltip-for-a-particular-visual-element">How to: Display a Tooltip for a Particular Visual Element</a></p>
 
 <br/>
 

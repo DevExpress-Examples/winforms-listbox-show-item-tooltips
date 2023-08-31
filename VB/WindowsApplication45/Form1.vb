@@ -12,24 +12,22 @@ Imports DevExpress.XtraEditors.Controls
 Namespace WindowsApplication45
 	Public Partial Class Form1
 		Inherits Form
-		Public Sub New()
-			InitializeComponent()
-		End Sub
+        Public Sub New()
+            InitializeComponent()
+            listBoxControl1.ToolTipController = toolTipController1
+            AddHandler toolTipController1.GetActiveObjectInfo, AddressOf toolTipController1_GetActiveObjectInfo
+        End Sub
 
-		Private Sub listBoxControl1_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles listBoxControl1.MouseMove
-			Dim listBoxControl As ListBoxControl = TryCast(sender, ListBoxControl)
-			Dim index As Integer = listBoxControl.IndexFromPoint(New Point(e.X, e.Y))
-			If index <> -1 Then
-				Dim item As String = TryCast(listBoxControl.GetItem(index), String)
-				toolTipController1.ShowHint(item, listBoxControl.PointToScreen(New Point(e.X, e.Y)))
-			Else
-				toolTipController1.HideHint()
-			End If
+        Private Sub toolTipController1_GetActiveObjectInfo(ByVal sender As Object, ByVal e As DevExpress.Utils.ToolTipControllerGetActiveObjectInfoEventArgs)
+            Dim listBoxControl As ListBoxControl = TryCast(e.SelectedControl, ListBoxControl)
+            If listBoxControl Is Nothing Then Return
 
-		End Sub
-
-		Private Sub listBoxControl1_MouseLeave(ByVal sender As Object, ByVal e As EventArgs) Handles listBoxControl1.MouseLeave
-			toolTipController1.HideHint()
-		End Sub
+            Dim index As Integer = listBoxControl.IndexFromPoint(e.ControlMousePosition)
+            If index <> -1 Then
+                Dim item As String = TryCast(listBoxControl.GetItem(index), String)
+                Dim obj As Object = index.ToString() & item
+                e.Info = New DevExpress.Utils.ToolTipControlInfo(obj, item)
+            End If
+        End Sub
 	End Class
 End Namespace

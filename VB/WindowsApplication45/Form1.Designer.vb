@@ -38,8 +38,6 @@ Namespace WindowsApplication45
 			Me.listBoxControl1.Name = "listBoxControl1"
 			Me.listBoxControl1.Size = New System.Drawing.Size(120, 95)
 			Me.listBoxControl1.TabIndex = 0
-'			Me.listBoxControl1.MouseMove += New System.Windows.Forms.MouseEventHandler(Me.listBoxControl1_MouseMove);
-'			Me.listBoxControl1.MouseLeave += New System.EventHandler(Me.listBoxControl1_MouseLeave);
 			' 
 			' Form1
 			' 

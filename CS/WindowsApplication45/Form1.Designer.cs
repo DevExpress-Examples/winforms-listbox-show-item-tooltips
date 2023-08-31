@@ -39,8 +39,6 @@ namespace WindowsApplication45 {
 			this.listBoxControl1.Name = "listBoxControl1";
 			this.listBoxControl1.Size = new System.Drawing.Size(120, 95);
 			this.listBoxControl1.TabIndex = 0;
-			this.listBoxControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.listBoxControl1_MouseMove);
-			this.listBoxControl1.MouseLeave += new System.EventHandler(this.listBoxControl1_MouseLeave);
 			// 
 			// Form1
 			// 
