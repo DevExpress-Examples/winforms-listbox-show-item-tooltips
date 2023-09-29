@@ -4,9 +4,9 @@
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
 
-# WinForms LixtBoxControl - Display item tooltips
+# WinForms ListBoxControl - Display item tooltips
 
-This example handles the [ToolTipController.GetActiveObjectInfo](https://docs.devexpress.com/WindowsForms/DevExpress.Utils.ToolTipController.GetActiveObjectInfo) event to configure and display a tooltip for a list item on mousehover. The example uses the [ListBoxControl.IndexFromPoint](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.BaseListBoxControl.IndexFromPoint(System.Drawing.Point)) method to get the item under the mouse pointer.
+This example handles the [ToolTipController.GetActiveObjectInfo](https://docs.devexpress.com/WindowsForms/DevExpress.Utils.ToolTipController.GetActiveObjectInfo) event to configure and display a tooltip for a list item on mouse hover. The example uses the [ListBoxControl.IndexFromPoint](https://docs.devexpress.com/WindowsForms/DevExpress.XtraEditors.BaseListBoxControl.IndexFromPoint(System.Drawing.Point)) method to get the item under the mouse pointer.
 
 ```csharp
 public Form1() {
